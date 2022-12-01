@@ -1,0 +1,137 @@
+<html>
+    <head>
+        <title>Change text to Dummy phone</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="scripts.js" defer></script>
+        <link rel="icon" href="logo.png">
+    </head>
+    <body>
+        <div class="nav-wrapper">
+            <nav class="navbar">
+                <a href="home.html"><i class="material-icons" id="home-i">home</i></a>
+                <div class="right-nav">
+                    <i 
+                        class="material-icons dark-mode" 
+                        id="dark-mode-toogle"
+                        style="font-size:20px;"
+                        onclick="changeMode()"
+                    >dark_mode</i>
+                </div>
+            </nav>
+        </div>
+        <main>
+            <div class="rect-container">
+                <div class="row">
+                    <div class="number">
+                        <div>1</div>
+                        <div class="letter">.</div>
+                    </div>
+                    <div class="number">
+                        <div>2</div>
+                        <div class="letter">abc</div>
+                    </div>
+                    <div class="number">
+                        <div>3</div>
+                        <div class="letter">def</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="number">
+                        <div>4</div>
+                        <div class="letter">ghi</div>
+                    </div>
+                    <div class="number">
+                        <div>5</div>
+                        <div class="letter">jkl</div>
+                    </div>
+                    <div class="number">
+                        <div>6</div>
+                        <div class="letter">mno</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="number">
+                        <div>7</div>
+                        <div class="letter">pqrs</div>
+                    </div>
+                    <div class="number">
+                        <div>8</div>
+                        <div class="letter">tuv</div>
+                    </div>
+                    <div class="number">
+                        <div>9</div>
+                        <div class="letter">wxyz</div>
+                    </div>
+                </div>
+            </div>
+            <article class="mid-p">
+                <p>Change any text to dummy phone notation</p>
+            </article> 
+            <article class="intro-p">
+                <p>Ever miss those good old days when we would repeatedly press tiny
+                    buttons on a phone that looks like a brick just so that we could
+                    say "Good morning!"? Yeah, me neither. But I gotta practice web 
+                    design so here we are. Just put your text in the input box and the 
+                    output box will tell you what buttons you should smash and how many 
+                    times. Enjoy!
+                </p>
+            </article>
+            <div class="io">
+                <menu class="selector">
+                    <menuitem 
+                        class="selector-item" 
+                        id="text-to-dummy-select"
+                        onclick="changeToTextToDummy(); produceOutput()"
+                    >
+                        Text to Dummy
+                    </menuitem> 
+                    <menuitem 
+                        class="selector-item" 
+                        id="dummy-to-text-select"
+                        onclick="changeToDummyToText(); produceOutput()"
+                    >
+                        Dummy to Text
+                    </menuitem>
+                </menu>
+                <div class="input-output-wrapper">
+                    <div class="input-wrapper">
+                        <p class="io-p">Input</p>
+                        <div class="input-div">
+                            <textarea 
+                                placeholder="Write your text here" 
+                                name="inputt" 
+                                id="input-field" 
+                                cols="30" 
+                                rows="10"
+                                oninput="produceOutput()"
+                            ></textarea> 
+                        </div>
+                        <button 
+                            class="material-icons io-button"
+                            onclick="clearText(document.getElementById('input-field')); produceOutput()"
+                        >clear</button>
+                    </div>
+                    <div class="output-wrapper">
+                        <p class="io-p">Output</p>
+                        <div class="output-div">
+                            <textarea name="outputt" id="output-field" cols="30" rows="10"></textarea>
+                        </div>
+                        <button class="io-button"> 
+                            <i 
+                                class="material-icons copy-button" 
+                                style="font-size: 18px"
+                                onclick="copyText(document.getElementById('output-field'))"
+                            >content_copy</i></button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p class="footer-p">2022</p>
+            <a class="footer-a" target="_blank" href="https://github.com/AnaniyaT">Github</a>
+            <a class="footer-a" target="_blank" href="https://t.me/slipstreamm"> Telegram</a>
+            <p class="footer-p">Ananiya T</p>
+        </footer>
+    </body>
+</html>
